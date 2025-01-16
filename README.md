@@ -10,8 +10,8 @@
 
 - [Herramientas](#Herramientas)
 - [Descripción y contexto](#Descripción-y-contexto)
-- [Guía de usuario y instalación](#Guía-de-usuario-y-instalación)
-- [Información adicional](#Información-adicional)
+- [Guía de usuario y instalación Backend](#Guía-de-usuario-y-instalación-Backend)
+- [Guía de usuario y instalación Frontend](#Guía-de-usuario-y-instalación-Frontend)
 
 
 ## Herramientas
