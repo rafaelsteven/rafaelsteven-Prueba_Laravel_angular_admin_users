@@ -1,0 +1,36 @@
+.mat-mdc-dialog-surface{
+    border-radius: 4px !important;
+    box-shadow: 0px 1px 8px -3px !important;
+}
+.dialog-title
+{
+    font-size: 13px;
+    font-weight: 400;
+    padding: 30px;
+}
+.btn-container
+{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px 15px 20px;
+    gap: 10px;
+    align-items: center;
+
+    .bt-cancelar
+    {
+        border-radius: 4px;
+        border: 1px solid #dcdcdc;
+        background:#fff;
+        color: #547ddb;
+        padding: 5px 7px 5px 7px;
+    }
+
+    .bt-eliminar
+    {
+        border-radius: 4px;
+        border: 1px solid #dcdcdc;
+        background:#547ddb;
+        color: #fff;
+        padding: 5px 9px 5px 9px;
+    }
+}

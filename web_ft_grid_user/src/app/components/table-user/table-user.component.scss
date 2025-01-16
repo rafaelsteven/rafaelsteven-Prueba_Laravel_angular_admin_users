@@ -1,0 +1,189 @@
+.page-container {
+    background-color: #f2f2f2;  
+    .page-header {
+      display: flex;
+      border-bottom: 2px solid #cbced6;
+      margin-bottom: 15px;
+  
+      .header-left {
+        padding: 15px;
+        width: 100%;
+        .small-title {
+          font-size: 12px;
+          color: #49536e;
+          margin: 0;
+        }
+  
+        .main-title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #49536e;
+          margin: 5px 0;
+        }
+  
+        .filter-row {
+          display: flex;
+          gap: 15px;
+          margin-top: 10px;
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+  
+      .header-right {
+        button {
+          height: 40px;
+        }
+      }
+    }
+  .body-container {
+    padding: 20px;
+    .table-container {
+      background: #fff;
+      padding: 20px;
+      table {
+        width: 100%;
+        border-radius: 40px;
+        border-collapse: collapse;
+        background-color: #ffffff; 
+        border-right: 1px solid #dbdbdb;
+        border-left: 1px solid #dbdbdb;
+        
+    
+        th, td {
+          padding: 12px; 
+          text-align: center; 
+          border-top: 1px solid #dbdbdb; 
+          border-bottom: 1px solid #dbdbdb; 
+          color: #49536e;
+        }
+    
+        th {
+          font-weight: 600; 
+          background-color: #ffffff; 
+        }
+    
+        tbody tr {
+          cursor: pointer; 
+          transition: background-color 0.3s ease, font-weight 0.3s ease; 
+        }
+    
+        tbody tr td {
+          transition: background-color 0.3s ease; 
+        }
+      }
+    
+      .bt-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px; 
+      }
+    
+      .bt-edit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        width: 80px;
+        height: 30px;
+        color: #509352; 
+      }
+      .bt-edit:hover {
+        background: #d1f3da !important;
+        border: 1px solid #6faa76 !important;
+        border-radius: 4px;
+        padding: 3px;
+      }
+    
+      .bt-eliminar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 30px;
+        border: none;
+        background: none;
+        color: #b50101; 
+      }
+      .bt-eliminar:hover {
+        background: #f9dada !important; 
+        border: 1px solid #e07f7f !important;
+        border-radius: 4px;
+        padding: 3px;
+      }
+      .mdc-data-table__row:hover {
+        background-color: #f1f5fe; 
+        font-weight: 500; 
+      }
+    }
+    .pagination-container {
+      display: flex;
+      justify-content: left;
+      color: #49536e;
+      background: #f8f9fa;
+      padding: 20px 0 20px 30px; 
+      font-size: 13px;
+      font-weight: 700;
+    }
+  }
+    .header-right 
+    {
+      margin-bottom: 15px;
+      button {
+        border-radius: 4px;
+        border: none;
+        background: #e0e2e6;
+        font-weight: 500;
+        width: 200px;
+        color: #535c76;
+      }
+    }
+    .select-container {
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+      select {
+        padding: 7px;
+        height: 40px;
+        width: 230px;
+        border-radius: 4px;
+        color: #49536e;
+        background: #e2e7eb;
+        border: none;
+        appearance: none; 
+        outline: none; 
+        background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20512%22%3E%3C%21--Font%20Awesome%20Free%206.7.2%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20Copyright%202025%20Fonticons%2C%20Inc.--%3E%3Cpath%20d%3D%22M137.4%20374.6c12.5%2012.5%2032.8%2012.5%2045.3%200l128-128c9.2-9.2%2011.9-22.9%206.9-34.9s-16.6-19.8-29.6-19.8L32%20192c-12.9%200-24.6%207.8-29.6%2019.8s-2.2%2025.7%206.9%2034.9l128%20128z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 10px center; 
+        background-size: 20px 17px; 
+        cursor: pointer; 
+        
+        &:hover {
+          background-color: #f1f5fe; 
+        }
+    
+        &:focus {
+          background-color: #f1f5fe; 
+        }
+    
+        option {
+          background-color: #ffffff; 
+          color: #49536e; 
+          padding: 10px;
+          
+          &:hover {
+            background-color: #f1f5fe; 
+          }
+          
+          &:checked {
+            background-color: #f1f5fe; 
+          }
+        }
+      }
+    }
+    
+    
+    
+    
+  }

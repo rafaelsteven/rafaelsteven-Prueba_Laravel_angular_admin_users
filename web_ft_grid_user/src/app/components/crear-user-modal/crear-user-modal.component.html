@@ -1,0 +1,58 @@
+<div class="modal-header">
+<h2>Registrar usuario</h2>
+<span class="close" (click)="onClose()">&times;</span>
+</div>
+<form #createUserForm="ngForm">
+  <div class="modal-content">
+    <div class="left-column">
+      <div class="form-group">
+        <label>Departamento</label>
+        <select id="selectDepartamentoEdit" [(ngModel)]="dataCreate.idDepartamento" name="departamento" placeholder="Seleccione un departamento" required>
+          <option *ngFor="let option of departamentos" [value]="option.idDepartamento">
+            {{ option.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Usuario</label>
+        <input placeholder="" [(ngModel)]="dataCreate.usuario" name="usuario" required>
+      </div>
+      <div class="form-group">
+        <label>Primer Nombre</label>
+        <input [(ngModel)]="dataCreate.primerNombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label>Primer Apellido</label>
+        <input [(ngModel)]="dataCreate.primerApellido" name="apellido" required>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="form-group">
+        <label for="cargo">Cargo:</label>
+        <select id="cargo" [(ngModel)]="dataCreate.idCargo" name="cargo" placeholder="Seleccione un cargo" required>
+          <option *ngFor="let option of cargos" [value]="option.idCargo">
+            {{ option.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="emailCrear" name="email" [(ngModel)]="dataCreate.email" required>
+      </div>
+      <div class="form-group">
+        <label>Segundo Nombre</label>
+        <input type="text" id="segNombreCrear" [(ngModel)]="dataCreate.segundoNombre" name="segundoNombre">
+      </div>
+      <div class="form-group">
+        <label>Segundo Apellido</label>
+        <input [(ngModel)]="dataCreate.segundoApellido" name="segundoApellido">
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-container">
+    <button [disabled]="!createUserForm.valid" (click)="onCreate()" class="bt-crear">Registrar</button>
+    <button (click)="onClose()" class="bt-cancelar">Cancelar</button>
+  </div>
+</form>

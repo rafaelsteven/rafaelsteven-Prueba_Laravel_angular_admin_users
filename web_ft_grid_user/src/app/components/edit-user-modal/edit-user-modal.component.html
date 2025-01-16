@@ -1,0 +1,59 @@
+<div class="modal-header">
+  <h2>Editar usuario</h2>
+  <span class="close" (click)="onClose()">&times;</span>
+  </div>
+  <form (ngSubmit)="onSave()" #editUserForm="ngForm">
+    <div class="modal-content">
+    <div class="left-column">
+      <input type="hidden" [(ngModel)]="dataUser.idUsuario" name="idUser">
+      <div class="form-group">
+        <label>Departamento</label>
+        <select id="selectDepartamentoEdit" name="idDepartamento" (change)="onDepartamentoChange($event)">
+          <option *ngFor="let option of departamentos" [value]="option.idDepartamento" [selected]="option.nombre === dataUser.departamento.nombre">
+            {{ option.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Usuario</label>
+        <input matInput [(ngModel)]="dataUser.usuario" name="usuario" required>
+      </div>
+      <div  class="form-group">
+        <label>Primer Nombre</label>
+        <input matInput [(ngModel)]="dataUser.primerNombre" name="primerNombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidoEdit">Primer Apellido</label>
+        <input matInput [(ngModel)]="dataUser.primerApellido" name="primerApellido" required>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="form-group">
+        <label>Cargo</label>
+        <select id="selectCargoEdit"  name="idCargo" (change)="onCargoChange($event)">
+          <option *ngFor="let option of cargos" [value]="option.idCargo" [selected]="option.nombre === dataUser.cargo.nombre">
+            {{ option.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="emailEdit">Email</label>
+        <input matInput [(ngModel)]="dataUser.email" name="email" type="email" required>
+      </div>
+      <div class="form-group">
+        <label for="segNombreEdit">Segundo Nombre</label>
+        <input matInput [(ngModel)]="dataUser.segundoNombre" name="segundoNombre">
+      </div>
+      <div class="form-group">
+        <label for="segApellidoEdit">Segundo Apellido</label>
+        <input matInput [(ngModel)]="dataUser.segundoApellido" name="segundoApellido">
+      </div>
+    </div>
+  </div>
+    <div class="btn-container">
+      <button type="submit" [disabled]="!editUserForm.form.valid" class="bt-actualizar">Actualizar</button>
+      <button type="button" (click)="onClose()" class="bt-cancelar">Cerrar</button>
+    </div>
+  
+</form>
